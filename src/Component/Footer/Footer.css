@@ -1,0 +1,49 @@
+
+.footer {
+    padding: 4rem 4rem;
+    background-color: #D5D5D5;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+   
+    
+    padding-left: 1rem;
+    
+}
+
+.footer .box-container .box li {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem 0;
+    list-style: none;
+    cursor: pointer;
+}
+
+.footer .box-container .box li:hover {
+    color: #2156fa;
+}
+
+
+
+.footer .credit {
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    border-top: .2rem solid rgba(205, 221, 220, 0.1);
+}
+.sub {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer p{
+    color:#fff;
+}
+
+

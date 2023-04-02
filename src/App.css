@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/* mainfooter style */
+#jimdoLogo {
+    padding:1rem !important ;
+    font-weight: 600;
+    letter-spacing: .5rem;
+
+
+}
+#footer {
+   background-color: #ffffff;
+   padding-top: 4rem;
+}
+#footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+   
+    
+    padding-left: 1rem;
+    
+}
+#footer .box-container .box p {
+    font-size: 1rem;
+    color: #717677;
+    font-weight: 500;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#footer .box-container .box li {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem 0;
+    list-style: none;
+    cursor: pointer;
+    color: #010334;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#footer .box-container .box li:hover {
+    color: #2156fa;
+}
+.icons {
+    display: flex;
+    font-size: 2.5rem;
+    padding-top: 3rem;
+    
+}
+.sub {
+    color: #fff;
+    font-size: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.credits {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: var(--border);
+    color: var(--black);
+    font-weight: 200;
 }
 
-.App-link {
-  color: #61dafb;
+.credits span {
+    color: #010334;     
+    font-weight: 400;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* footer style */
+#testimonial {
+    background-image:url(Assets/Img/testimonial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+    animation: scale 10s;
 }
+
+#testimonialStore {
+    background-image:url(Assets/Img/testimonial-store.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+    animation: scale 10s;
+}
+
+#helpcenter {
+    background-image:url(Assets/Img/helpcenter-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    /* background-blend-mode: multiply; */
+    height: 60vh;
+    animation: scale 10s;
+}
+
+
+
+
+
+  
+  
+
+
+
+
+  
+  
