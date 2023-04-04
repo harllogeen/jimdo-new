@@ -2,12 +2,15 @@ import React from "react";
 import Logo from "../../../Component/common/Logo";
 import "../../../App.css";
 import HelpFooter from "../../../Component/Footer/HelpFooter";
+import { Link } from "react-router-dom";
 
 const HelpCenter = () => {
   return (
     <div className="bg-fcGray8 ">
       <nav className="bg-white shadow-md py-4 cursor-pointer px-20 fixed top-0 w-full z-50">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </nav>
       <div
         className="flex items-center justify-center mt-10   text-center"
@@ -112,7 +115,7 @@ const HelpCenter = () => {
             How do I optimize the design of my Jimdo website?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer  p-10">
+        <div className="text-center bg-white space-y-4 cursor-pointer hover:text-primary  p-10">
           <p className="text-3xl font-bold">Jimdo Finance App</p>
           <p className="text-xl ">
             How do I optimize the design of my Jimdo website?

@@ -10,6 +10,7 @@ import Features from "./Views/Pages/Features/Features";
 import FeatureWebsites from "./Views/Pages/Features/FeatureWebsites";
 import HelpCenter from "./Views/Pages/Help/HelpCenter";
 import Contact from "./Views/Pages/Help/Contact";
+import Login from "./Views/Auth/Login";
 
 export function Routes() {
   let element = useRoutes([
@@ -19,6 +20,10 @@ export function Routes() {
         {
           index: true,
           element: <Home />,
+        },
+        {
+          path: "login",
+          element: <Login />,
         },
       ],
     },

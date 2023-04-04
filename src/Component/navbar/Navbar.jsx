@@ -186,8 +186,8 @@ function Navbar() {
             </DropDown>
           </Link>
           <Link
-            className="hidden lg:inline-block py-2 px-6 hover:bg-blue-600 text-sm text-gray-900 font-bold  rounded-sm transition duration-200"
-            to="/"
+            className="hidden lg:inline-block py-2 px-6 hover:bg-blue-600 hover:text-white text-sm text-gray-900 font-bold  rounded-sm transition duration-200"
+            to="/login"
           >
             Login
           </Link>
