@@ -7,7 +7,7 @@ import OnlineSore from "./Views/Pages/Pricing/OnlineSore";
 import Website from "./Views/Pages/Pricing/Website";
 import Blog from "./Views/Pages/Blog/Blog";
 import Features from "./Views/Pages/Features/Features";
-import FeatureWebsites from "./Views/Pages/Features/FeatureWebsites";
+// import FeatureWebsites from "./Views/Pages/Features/FeatureWebsites";
 import HelpCenter from "./Views/Pages/Help/HelpCenter";
 import Contact from "./Views/Pages/Help/Contact";
 import Login from "./Views/Auth/Login";
