@@ -11,6 +11,8 @@ import Features from "./Views/Pages/Features/Features";
 import HelpCenter from "./Views/Pages/Help/HelpCenter";
 import Contact from "./Views/Pages/Help/Contact";
 import Login from "./Views/Auth/Login";
+import SignUp from "./Views/Auth/SignUp";
+import Email from "./Views/Auth/SignUp/Email";
 
 export function Routes() {
   let element = useRoutes([
@@ -25,6 +27,23 @@ export function Routes() {
           path: "login",
           element: <Login />,
         },
+        // {
+        //   path: "communitySignup",
+        //   element: <CommunitySignUp />,
+        // },
+        {
+          path:"signup",
+          children:[
+            {
+              index:true,
+              element:<SignUp />
+            },
+            {
+              path:"email",
+              element:<Email />
+            }
+          ]
+        }
       ],
     },
     {

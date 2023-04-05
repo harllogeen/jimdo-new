@@ -1,5 +1,7 @@
 import React from "react";
 import PrimaryButton from "../../../../Component/common/PrimaryButton";
+import { Link } from "react-router-dom";
+
 
 const DayByDayWebsite = () => {
   return (
@@ -9,9 +11,11 @@ const DayByDayWebsite = () => {
         Love your website from Day One
         </p>
       </div>
-      <PrimaryButton className="CreateWebsiteTodayBtn">
-        Let's get started
-      </PrimaryButton>
+      <Link to="/signup">
+        <PrimaryButton className="CreateWebsiteTodayBtn">
+          Let's get started
+        </PrimaryButton>
+      </Link>
     </div>
   );
 };

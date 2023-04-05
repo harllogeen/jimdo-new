@@ -61,14 +61,15 @@ const Carousel = () => {
         <div className="flex justify-between absolute top left w-full h-full">
           <button
             onClick={movePrev}
-            className=" text-white w-10 h-full text-center opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className=" text-white w-10 h-full text-center opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-200"
+            
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 ml-8 bg-white rounded-full"
+              className="h-8 w-8 ml-2 bg-primary rounded-full"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="#2A2E43"
+              stroke="#ffffff"
               strokeWidth={2}
             >
               <path
@@ -81,15 +82,15 @@ const Carousel = () => {
           </button>
           <button
             onClick={moveNext}
-            className=" text-white w-10 h-full text-center opacity-100 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
-            // disabled={isDisabled("next")}
+            className=" text-white w-10 h-full text-center opacity-100 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-200"
+            //  disabled={isDisabled("next")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8  bg-white rounded-full -ml-8"
+              className="h-8 w-8  bg-primary  rounded-full -ml-2"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="#2A2E43"
+              stroke="#ffffff"
               strokeWidth={2}
             >
               <path
@@ -105,12 +106,15 @@ const Carousel = () => {
           ref={carousel}
           className=" carousel-container relative flex gap-5 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
         >
-          <div className="carousel-item text-center relative w-80 h-64  flex space-x-8">
+          <div className="carousel-item text-center relative w-full h-64  flex space-x-8">
             <img src={pics1} alt="jjjdj" className="" />
             <img src={pics2} alt="jjjdj" className="" />
             <img src={pics3} alt="jjjdj" className="" />
             <img src={pics4} alt="jjjdj" className="" />
             <img src={pics5} alt="jjjdj" className="" />
+            <img src={pics2} alt="jjjdj" className="" />
+            <img src={pics3} alt="jjjdj" className="" />
+            <img src={pics4} alt="jjjdj" className="" />
           </div>
           );
         </div>

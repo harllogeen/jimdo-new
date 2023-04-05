@@ -2,6 +2,7 @@ import React from "react";
 import { HiArrowSmallRight } from "react-icons/hi2";
 import MarkIcon from "../../../../Assets/icons/MarkIcon";
 import shop from "../../../../Assets/Img/shop.jpg";
+import { Link } from "react-router-dom";
 import PrimaryButton from "../../../../Component/common/PrimaryButton";
 
 const Selling = () => {
@@ -63,7 +64,11 @@ const Selling = () => {
                 </div>
               );
             })}
-            <PrimaryButton>Let's get started</PrimaryButton>
+            <Link to="/signup">
+              <PrimaryButton className="CreateWebsiteTodayBtn">
+                Let's get started
+              </PrimaryButton>
+            </Link>
             <div>
               {sellingArray2.map((e, i) => {
                 return (

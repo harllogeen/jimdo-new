@@ -32,6 +32,7 @@ import inspi27 from "../../../Assets/Img/inspi27.jpg";
 import inspi28 from "../../../Assets/Img/inspi28.jpg";
 import inspi29 from "../../../Assets/Img/inspi29.jpg";
 import MainFooter from "../../../Component/Footer/MainFooter";
+import { Link } from "react-router-dom";
 
 const Inspiration = () => {
   return (
@@ -52,7 +53,9 @@ const Inspiration = () => {
           from around the world
           <br /> and get inspired for your website.
         </p>
-        <PrimaryButton>Start Now</PrimaryButton>
+        <Link to="/signup">
+          <PrimaryButton>Start Now</PrimaryButton>
+        </Link>
       </div>
       <section class="mx-auto w-full gap-12 p-12 grid grid-cols-3 ">
         <div class="w-full h-fit group">

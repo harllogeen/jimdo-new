@@ -26,10 +26,6 @@ const Login = () => {
         "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
       )
       .min(8),
-
-    // confirmPassword: Yup.string()
-    //   .oneOf([Yup.ref('password'), null], 'Password must match')
-    //   .required('Confirm password is required'),
   });
 
   return (
@@ -47,12 +43,14 @@ const Login = () => {
       {(formik) => (
         <div className="flex justify-center items-center mx-auto bg-fcGray8 ">
           <div className="">
-            <div className="flex justify-center py-6">
-              <Logo />
-            </div>
+            <Link to="/">
+              <div className="flex justify-center py-6">
+                <Logo />
+              </div>
+            </Link>
 
-            <div className="bg-white shadow-lg mb-8  p-8">
-              <div>
+            <div className="bg-white shadow-lg mb-8  p-8 ">
+              <div className="space-y-2">
                 <p className="font-bold text-xl">Welcome back</p>
                 <p className="text-xl">
                   You can log in to your Jimdo account <br />
@@ -108,12 +106,14 @@ const Login = () => {
                   </button>
                 </Link>
 
-                <div className="space-y-8 pt-8">
-                 <div className="text-fcGray4 border-b-2"></div>
+                <div className="space-y-4 pt-8">
+                  <div className="text-fcGray4 border-b-2"></div>
                   <p className="text-xl text-center font-thin ">New here?</p>
-                  <button className="bg-transparent border-2 border-primary text-primary w-full px-4 py-3 font-semibold hover:bg-fcNavy5  text-sm ">
-                    SIGN UP
-                  </button>
+                  <Link to="/signup">
+                    <button className="bg-transparent border-2 border-primary text-primary w-full px-4 py-3 font-semibold hover:bg-primary hover:text-white my-3  text-sm ">
+                      SIGN UP
+                    </button>
+                  </Link>
                 </div>
               </Form>
             </div>
