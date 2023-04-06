@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BigTitle, BlogTitle } from "../../../Component/common/Title";
 import newImg from "../../../Assets/Img/blog1.webp";
 import Blog2 from "../../../Assets/Img/blog2.webp";
@@ -19,8 +19,16 @@ import Blog16 from "../../../Assets/Img/blog16.webp";
 import MainFooter from "../../../Component/Footer/MainFooter";
 import { SecondaryText } from "../../../Component/common/Text";
 import NavbarBlog from "../../../Component/navbar/NavbarBlog";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Blog = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   const Blog1 = [
     {
       imgUrl: Blog2,
@@ -145,8 +153,17 @@ const Blog = () => {
         <section className="bg-fcGray7 px-20 py-10  ">
           <div>
             <div className="pt-8">
-              <BigTitle>THE JIMDO BLOG</BigTitle>
-              <p className="text-6xl font-extrabold text-primary ">
+              <BigTitle
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-center"
+              >
+                THE JIMDO BLOG
+              </BigTitle>
+              <p
+                className="text-6xl font-extrabold text-primary "
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+              >
                 FOR SMALL BUSINESSES
               </p>
               <p className="font-GilroyRegular text-2xl text-fcNavy6 py-8">
@@ -162,7 +179,11 @@ const Blog = () => {
               </div>
               <div className=" cursor-pointer text-fcNavy6">
                 <p className="text-fcGray font-semibold   ">NEWS</p>
-                <p className=" text-4xl font-semibold  justify-center hover:text-primary  ">
+                <p
+                  className=" text-4xl font-semibold  justify-center hover:text-primary"
+                  data-aos="flip-left"
+                  data-aos-easing="ease-out-cubic"
+                >
                   Smart Apps: Do Even More
                   <br /> with Your Website!
                 </p>
@@ -177,7 +198,7 @@ const Blog = () => {
                         <img src={Blog2} className="w-full cursor-pointer" />
                         <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                       </div>
-                      <div className="px-10 space-y-2 py-14">
+                      <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                         <div className="text-fcGray font-semibold text-xl">
                           {e.websiteTips}
                         </div>
@@ -197,7 +218,7 @@ const Blog = () => {
                         <img src={Blog3} className="w-full cursor-pointer" />
                         <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                       </div>
-                      <div className="px-10 space-y-2 py-14">
+                      <div className="px-10 space-y-2 py-14" data-aos="fade-left">
                         <div className="text-fcGray font-semibold text-xl">
                           {e.websiteTips}
                         </div>
@@ -217,7 +238,7 @@ const Blog = () => {
                         <img src={Blog4} className="w-full cursor-pointer" />
                         <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                       </div>
-                      <div className="px-10 space-y-2 py-14">
+                      <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                         <div className="text-fcGray font-semibold text-xl">
                           {e.websiteTips}
                         </div>
@@ -256,7 +277,7 @@ const Blog = () => {
                           <img src={Blog5} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-right">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -276,7 +297,7 @@ const Blog = () => {
                           <img src={Blog6} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -296,7 +317,7 @@ const Blog = () => {
                           <img src={Blog7} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-right">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -337,7 +358,7 @@ const Blog = () => {
                           <img src={Blog8} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -357,7 +378,7 @@ const Blog = () => {
                           <img src={Blog9} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -377,7 +398,7 @@ const Blog = () => {
                           <img src={Blog10} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -417,7 +438,7 @@ const Blog = () => {
                           <img src={Blog11} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -437,7 +458,7 @@ const Blog = () => {
                           <img src={Blog12} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -457,7 +478,7 @@ const Blog = () => {
                           <img src={Blog13} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -497,7 +518,7 @@ const Blog = () => {
                           <img src={Blog14} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -517,7 +538,7 @@ const Blog = () => {
                           <img src={Blog15} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>
@@ -537,7 +558,7 @@ const Blog = () => {
                           <img src={Blog16} className="w-full cursor-pointer" />
                           <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-primary bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-10"></div>
                         </div>
-                        <div className="px-10 space-y-2 py-14">
+                        <div className="px-10 space-y-2 py-14" data-aos="fade-up">
                           <div className="text-fcGray font-semibold text-xl">
                             {e.websiteTips}
                           </div>

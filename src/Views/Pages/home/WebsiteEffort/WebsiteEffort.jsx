@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Title from "../../../../Component/common/Title";
 import load from "../../../../Assets/Gif/load.gif"
 import MarkIcon from "../../../../Assets/icons/MarkIcon";
 import { HiArrowSmallRight } from "react-icons/hi2";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WebsiteEffort = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000
+    });
+  }, []);
+
   const myEffortArray = [
     {
       icon: <MarkIcon />,
@@ -48,10 +57,10 @@ const WebsiteEffort = () => {
         </div>
         <div>
           <div className="flex mx-auto items-center justify-center space-x-20 pt-8 pb-16">
-            <div className="">
+            <div className="" data-aos="fade-right">
               <img src={load} alt="load" className="w-96" />
             </div>
-            <div>
+            <div data-aos="fade-left">
               <div>
                 {myEffortArray.map((e, i) => {
                   return (

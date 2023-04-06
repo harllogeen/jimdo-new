@@ -1,11 +1,20 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { HiArrowSmallRight } from "react-icons/hi2";
 import MarkIcon from "../../../../Assets/icons/MarkIcon";
 import shop from "../../../../Assets/Img/shop.jpg";
 import { Link } from "react-router-dom";
 import PrimaryButton from "../../../../Component/common/PrimaryButton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Selling = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000
+    });
+  }, []);
+
   const sellingArray = [
     {
       icon: <MarkIcon />,
@@ -44,8 +53,8 @@ const Selling = () => {
   ];
   return (
     //selling made simple//
-    <div className="bg-white">
-      <div className="flex w-[100%]">
+    <div className="bg-white" >
+      <div className="flex w-[100%]" data-aos="fade-up">
         <div className="flex justify-center items-center mx-auto">
           <div className="">
             <p className="text-4xl font-semibold">

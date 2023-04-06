@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../../../Component/common/Button";
 import { HiCheck } from "react-icons/hi";
 import Data from "../Pricing/Table/Data";
@@ -7,8 +7,17 @@ import Questions from "./Questions/Questions";
 import PrimaryButton from "../../../Component/common/PrimaryButton";
 import Title from "../../../Component/common/Title";
 import imagewebsite from "../../../Assets/Img/imagewebsite.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Website = () => {
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   const pricingArray1 = [
     {
       title: "Everything plus:",
@@ -190,7 +199,7 @@ const Website = () => {
             <p className="font-semibold">Included in all premium plans:</p>
             <div className="flex justify-between">
               <div className="flex space-x-4 font-GilroyRegular cursor-pointer ">
-                <p className="hover:text-primary" >Ad-free</p>
+                <p className="hover:text-primary">Ad-free</p>
                 <p className="hover:text-primary">Connect your own domain</p>
                 <p className="hover:text-primary">Connect your email address</p>
                 <p className="hover:text-primary">Contact forms</p>
@@ -214,9 +223,19 @@ const Website = () => {
       <div className="">
         <Questions />
         <div className="grid grid-cols-2 items-center justify-center my-32 space-x-6 ">
-          <img src={imagewebsite} alt="imagewebsite" />
+          <img
+            src={imagewebsite}
+            alt="imagewebsite"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+          />
           <div>
-            <p className="text-4xl font-semibold text-fcNavy3">
+            <p
+              className="text-4xl font-semibold text-fcNavy3"
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               Want to customize your website
               <br /> with code? Try our Creator editor
             </p>
@@ -231,10 +250,12 @@ const Website = () => {
           </div>
         </div>
         <div className="text-center text-fcNavy3">
-          <Title>
+          <Title data-aos="flip-left" data-aos-easing="ease-out-cubic">
             Thank you for over 32 million Jimdo <br /> websites!
           </Title>
-          <p className="text-4xl pt-8  pb-10 ">Made in Nigeria, 2023</p>
+          <p className="text-4xl pt-8  pb-10" data-aos="zoom-out-up">
+            Made in Nigeria, 2023
+          </p>
         </div>
       </div>
     </div>

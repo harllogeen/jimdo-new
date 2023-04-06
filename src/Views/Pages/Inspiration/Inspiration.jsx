@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import PrimaryButton from "../../../Component/common/PrimaryButton";
 import Title from "../../../Component/common/Title";
 import Navbar from "../../../Component/navbar/Navbar";
@@ -33,14 +33,21 @@ import inspi28 from "../../../Assets/Img/inspi28.jpg";
 import inspi29 from "../../../Assets/Img/inspi29.jpg";
 import MainFooter from "../../../Component/Footer/MainFooter";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Inspiration = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000
+    });
+  }, []);
   return (
     <div>
       <div>
         <Navbar />
       </div>
-      <div className="text-center mt-40 ">
+      <div className="text-center mt-40 " data-aos="fade-up">
         <Title>
           Outstanding Jimdo Website
           <br /> examples. All built with Jimdo.

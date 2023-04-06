@@ -9,7 +9,10 @@ const NavbarBlog = () => {
       <div className="px-20">
         <div className="bg-white">
           <div className="flex justify-between items-center">
-            <Logo />
+            <Link to="/">
+              <Logo />
+            </Link>
+
             <div className="bg-primary w-80 px-2 py-4  text-white  font-GilroySemiBold  text-xl my-5 text-center hover:border-2 border-fcGray ">
               Try Jimdo Free
             </div>
