@@ -26,12 +26,12 @@ const Home = () => {
         <div>
           <div className="bg-secondary h-full">
             <div className="pt-44">
-              <div className="flex justify-center space-x-52 items-center"  data-aos="fade-up">
-                <div
-                  className="text-7xl font-GilroyExtraBold text-fcNavy2"
-                  
-                  
-                >
+              <div
+                className="flex justify-center space-x-52 items-center"
+                data-aos="fade-up"
+                
+              >
+                <div className="text-7xl font-GilroyExtraBold text-fcNavy2">
                   <h1>
                     Everything for
                     <br /> your business
@@ -61,6 +61,7 @@ const Home = () => {
         <Indipendent />
         <Footer />
         <DayByDayWebsite />
+     
         <MainFooter />
       </>
     </div>

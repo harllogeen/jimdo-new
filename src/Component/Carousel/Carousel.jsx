@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-
 import pics1 from "../../Assets/Img/pics1.jpg";
 import pics2 from "../../Assets/Img/pics2.jpg";
 import pics3 from "../../Assets/Img/pics3.jpg";
@@ -62,7 +61,6 @@ const Carousel = () => {
           <button
             onClick={movePrev}
             className=" text-white w-10 h-full text-center opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-200"
-            
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +102,7 @@ const Carousel = () => {
         </div>
         <div
           ref={carousel}
-          className=" carousel-container relative flex gap-5 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+          className=" carousel-container relative flex gap-5 overflow-hidden  snap-x snap-mandatory touch-pan-x z-0 flex-nowrap overflow-x-scroll scroll-smooth no-scrollbar"
         >
           <div className="carousel-item text-center relative w-full h-64  flex space-x-8">
             <img src={pics1} alt="jjjdj" className="" />

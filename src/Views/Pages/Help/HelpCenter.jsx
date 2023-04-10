@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Logo from "../../../Component/common/Logo";
 import "../../../App.css";
 import HelpFooter from "../../../Component/Footer/HelpFooter";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HelpCenter = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div className="bg-fcGray8 ">
       <nav className="bg-white shadow-md py-4 cursor-pointer px-20 fixed top-0 w-full z-50">
@@ -58,7 +67,8 @@ const HelpCenter = () => {
         </div>
       </div>
       <div className="grid grid-cols-3 m-20 gap-10 justify-center bg-fcGray8 ">
-        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary">
+        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary"  data-aos="fade-down"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">First Steps</p>
           <p className="text-xl ">
             I've just created my website , what should I takecare of first?
@@ -71,51 +81,59 @@ const HelpCenter = () => {
             toubleshoot errors?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary">
+        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary"  data-aos="fade-down"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">Design</p>
           <p className="text-xl ">
             How do I optimize the design of my Jimdo website?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary">
+        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary"  data-aos="fade-up"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">My Jimdo</p>
           <p className="text-xl ">
             I've just created my website , what should I takecare of first?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary">
+        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary"  data-aos="fade-down"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">My Contract</p>
           <p className="text-xl ">
             What parts make up my Jimdo website? How do I edit it and
             toubleshoot errors?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary">
+        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary"  data-aos="fade-up"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">Online Store</p>
           <p className="text-xl ">
             How do I optimize the design of my Jimdo website?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary">
+        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary"  data-aos="fade-down"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">SEO</p>
           <p className="text-xl ">
             I've just created my website , what should I takecare of first?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary">
+        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary"  data-aos="fade-left"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">Domain</p>
           <p className="text-xl ">
             What parts make up my Jimdo website? How do I edit it and
             toubleshoot errors?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary">
+        <div className="text-center bg-white space-y-4 cursor-pointer p-10 hover:text-primary"  data-aos="fade-up"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">Email</p>
           <p className="text-xl ">
             How do I optimize the design of my Jimdo website?
           </p>
         </div>
-        <div className="text-center bg-white space-y-4 cursor-pointer hover:text-primary  p-10">
+        <div className="text-center bg-white space-y-4 cursor-pointer hover:text-primary  p-10"  data-aos="fade-right"
+            data-aos-easing="linear">
           <p className="text-3xl font-bold">Jimdo Finance App</p>
           <p className="text-xl ">
             How do I optimize the design of my Jimdo website?

@@ -10,12 +10,13 @@ import {
 import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import Logo from "../common/Logo";
+import ScrollToTop from "../Scroll/ScrollToTop";
 
 const MainFooter = () => {
   const [openLanguages, setOpenLanguages] = useState(false);
   return (
     <div>
-      <div id="footer">
+      <div id="footer" className="relative">
         <div className="box-container ml-4 cursor-pointer">
           <div className="box">
             <div className="">
@@ -76,7 +77,11 @@ const MainFooter = () => {
                 )}
               </div>
             </Link>
+            <div className="absolute bottom-6 right-16 z-50">
+            <ScrollToTop />
+            </div>
           </div>
+          
         </div>
       </div>
     </div>

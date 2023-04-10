@@ -25,7 +25,7 @@ import "aos/dist/aos.css";
 const Blog = () => {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 3000,
     });
   }, []);
 

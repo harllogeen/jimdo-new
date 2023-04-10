@@ -192,7 +192,7 @@ const OnlineSore = () => {
             data-aos-easing="linear"
           />
           <div
-            data-aos="fade-right"
+            data-aos="fade-left"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
           >

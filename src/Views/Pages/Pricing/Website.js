@@ -222,7 +222,11 @@ const Website = () => {
       </div>
       <div className="">
         <Questions />
-        <div className="grid grid-cols-2 items-center justify-center my-32 space-x-6 ">
+        <div
+          className="grid grid-cols-2 items-center justify-center my-32 space-x-6 "
+          data-aos="fade-down"
+          data-aos-easing="linear"
+        >
           <img
             src={imagewebsite}
             alt="imagewebsite"
@@ -230,12 +234,7 @@ const Website = () => {
             data-aos-easing="linear"
           />
           <div>
-            <p
-              className="text-4xl font-semibold text-fcNavy3"
-              data-aos="fade-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
-            >
+            <p className="text-4xl font-semibold text-fcNavy3">
               Want to customize your website
               <br /> with code? Try our Creator editor
             </p>

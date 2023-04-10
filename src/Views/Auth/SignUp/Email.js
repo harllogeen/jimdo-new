@@ -63,7 +63,7 @@ const Email = () => {
               </div>
             </Link>
 
-            <div className="bg-white shadow-lg mb-8  p-8   ">
+            <div className="bg-white shadow-2xl mb-8  p-8   ">
               <div className="">
                 <p className="font-bold text-2xl">Sign up with email</p>
               </div>
@@ -116,12 +116,12 @@ const Email = () => {
                         />
                         <span className="ml-2 text-sm">
                           The Jimdo{" "}
-                          <span className="text-primary">
+                          <span className="text-primary cursor-pointer">
                             Terms and Conditions
                           </span>{" "}
                           apply.
                           <br /> The Jimdo{" "}
-                          <span className="text-primary">
+                          <span className="text-primary cursor-pointer">
                             Privacy Policy
                           </span>{" "}
                           applies.

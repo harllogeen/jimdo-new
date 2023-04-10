@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SecondaryButton } from "../../../Component/common/Button";
 import Domain from "../../../Assets/Img/domain.jpg";
 import Pages from "../../../Assets/Img/pages.jpg";
@@ -13,13 +13,28 @@ import websiteStore from "../../../Assets/Img/testimonial-website-store.jpg";
 import "../../../App.css";
 import PrimaryButton from "../../../Component/common/PrimaryButton";
 import MainFooter from "../../../Component/Footer/MainFooter";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FeatureOnlineStore = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div>
       <section>
         <div className="grid grid-cols-2 items-center gap-8 m-10 ">
-          <img src={Domain} alt="domain" />
+          <img
+            src={Domain}
+            alt="domain"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          />
           <div>
             <p className="text-fcNavy6 text-4xl font-semibold">
               Build trust with your professional
@@ -46,12 +61,24 @@ const FeatureOnlineStore = () => {
             <SecondaryButton>Get Started</SecondaryButton>
           </div>
           <div>
-            <img src={Pages} alt="domain" />
+            <img
+              src={Pages}
+              alt="domain"
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            />
           </div>
         </div>
 
         <div className="grid grid-cols-2 items-center mx-10 my-20 gap-8 ">
-          <img src={Social} alt="domain" />
+          <img
+            src={Social}
+            alt="domain"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          />
           <div>
             <p className="text-fcNavy6 text-4xl font-semibold">
               Sell and market your products on
@@ -78,12 +105,24 @@ const FeatureOnlineStore = () => {
             <SecondaryButton>Get Started</SecondaryButton>
           </div>
           <div>
-            <img src={payment} alt="domain" />
+            <img
+              src={payment}
+              alt="domain"
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            />
           </div>
         </div>
 
         <div className="grid grid-cols-2 items-center mx-10 my-20 gap-8 ">
-          <img src={Revenue} alt="domain" />
+          <img
+            src={Revenue}
+            alt="domain"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          />
           <div>
             <p className="text-fcNavy6 text-4xl font-semibold">
               No commission fees
@@ -96,7 +135,6 @@ const FeatureOnlineStore = () => {
           </div>
         </div>
         <div className="grid grid-cols-2 items-center mx-10 my-20 gap-8 ">
-          <img src={Google} alt="domain" />
           <div>
             <p className="text-fcNavy6 text-3xl font-semibold">
               Get found on Google step-by-
@@ -109,8 +147,24 @@ const FeatureOnlineStore = () => {
             </p>
             <SecondaryButton>Get Started</SecondaryButton>
           </div>
+          <img
+            src={Google}
+            alt="domain"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          />
         </div>
         <div className="grid grid-cols-2  items-center mx-10 my-20 gap-8">
+          <div>
+            <img
+              src={Support}
+              alt="domain"
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            />
+          </div>
           <div>
             <p className="text-fcNavy6 text-3xl font-semibold ">
               Expert support on your schedule
@@ -121,12 +175,8 @@ const FeatureOnlineStore = () => {
             </p>
             <SecondaryButton>Get Started</SecondaryButton>
           </div>
-          <div>
-            <img src={Support} alt="domain" />
-          </div>
         </div>
         <div className="grid grid-cols-2 items-center mx-10 my-20 gap-8 ">
-          <img src={Gdpr} alt="domain" />
           <div>
             <p className="text-fcNavy6 text-3xl font-semibold">
               100% GDPR-compliant legal
@@ -139,27 +189,34 @@ const FeatureOnlineStore = () => {
             </p>
             <SecondaryButton>Get Started</SecondaryButton>
           </div>
+          <img
+            src={Gdpr}
+            alt="domain"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          />
         </div>
         <div>
           <div className=" w-full" id="testimonialStore">
             {/* <img src={testimonial} alt="tesi" className="relative" /> */}
             <div className="text-center absolute right-8 top-14 space-y-8">
               <img src={websiteStore} alt="website" className="w-[500px]" />
-              <p className="text-4xl font-GilroySemiBold text-fcNavy6">
+              <p className="text-4xl font-GilroySemiBold text-fcNavy6" data-aos="fade-up">
                 „With my own website, I can
                 <br /> now present myself more
                 <br />
                 professionally to
                 <br /> customers.“
               </p>
-              <p className="text-fcNavy6 font-semibold text-sm">
+              <p className="text-fcNavy6 font-semibold text-sm" data-aos="fade-up">
                 Nata,<span className="font-thin">studiomaals.com</span>{" "}
               </p>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-2  items-center mx-10 my-20 gap-8">
-          <div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-center">
             <p className="text-fcNavy6 text-4xl font-semibold ">Why Jimdo?</p>
             <p className="py-4  font-thin text-fcNavy6 ">
               Developed with small businesses and the self-employed in mind, we

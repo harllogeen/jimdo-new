@@ -28,12 +28,35 @@ const Login = () => {
       .min(8),
   });
 
+  //send login credentials tto bqackend API server
+  // fetch("/api/login", {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify({ email, password }),
+  // })
+  // .then(response => response.json())
+  // .then(data => {
+      //store JWT token in local storage or cookie
+  //     localStorage.setItem('token', data.token)
+  // })
+  // .catch(error => console.error(error));
+
+  //Make authenticated request to backend API server
+  // const token = localStorage.getItem('token');
+  // fetch('/api/user', {
+  //   headers: { Authorization: 'Bearer $(token)'}
+  // })
+  // .then(response => response.json())
+  // .then(data => {
+    //Handle response data
+  // })
+  // .catch(error => console.error(error))
+
   return (
     <Formik
       initialValues={{
         email: "",
         password: "",
-        // confirmPassword: ''
       }}
       validationSchema={validate}
       onSubmit={(values) => {
@@ -41,7 +64,7 @@ const Login = () => {
       }}
     >
       {(formik) => (
-        <div className="flex justify-center items-center mx-auto bg-fcGray8 ">
+        <div className="flex justify-center items-center mx-auto bg-fcGray8  ">
           <div className="">
             <Link to="/">
               <div className="flex justify-center py-6">

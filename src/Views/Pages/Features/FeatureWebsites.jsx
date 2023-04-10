@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { SecondaryButton } from "../../../Component/common/Button";
 import Domain from "../../../Assets/Img/domain.jpg";
 import Pages from "../../../Assets/Img/pages.jpg";
@@ -11,13 +11,24 @@ import website from "../../../Assets/Img/testimonial-website.jpg";
 import "../../../App.css";
 import PrimaryButton from "../../../Component/common/PrimaryButton";
 import MainFooter from "../../../Component/Footer/MainFooter";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FeatureWebsites = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div>
       <section>
         <div className="grid grid-cols-2 items-center gap-8 m-10 ">
-          <img src={Domain} alt="domain" />
+          <img src={Domain} alt="domain"  data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" />
           <div>
             <p className="text-fcNavy6 text-3xl font-semibold">
               Build trust with your professional
@@ -43,12 +54,16 @@ const FeatureWebsites = () => {
             <SecondaryButton>Get Started</SecondaryButton>
           </div>
           <div>
-            <img src={Pages} alt="domain" />
+            <img src={Pages} alt="domain"  data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" />
           </div>
         </div>
 
         <div className="grid grid-cols-2 items-center mx-10 my-20 gap-8 ">
-          <img src={Google} alt="domain" />
+          <img src={Google} alt="domain"  data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" />
           <div>
             <p className="text-fcNavy6 text-3xl font-semibold">
               Get found on Google step-by-
@@ -74,12 +89,16 @@ const FeatureWebsites = () => {
             <SecondaryButton>Get Started</SecondaryButton>
           </div>
           <div>
-            <img src={Support} alt="domain" />
+            <img src={Support} alt="domain"  data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" />
           </div>
         </div>
 
         <div className="grid grid-cols-2 items-center mx-10 my-20 gap-8 ">
-          <img src={Gdpr} alt="domain" />
+          <img src={Gdpr} alt="domain"  data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" />
           <div>
             <p className="text-fcNavy6 text-3xl font-semibold">
               100% GDPR-compliant legal
@@ -98,17 +117,17 @@ const FeatureWebsites = () => {
             {/* <img src={testimonial} alt="tesi" className="relative" /> */}
             <div className="text-center absolute right-8 top-14 space-y-8">
               <img src={website} alt="website" className="w-[500px]" />
-              <p className="text-4xl font-GilroySemiBold text-fcNavy6">
+              <p className="text-4xl font-GilroySemiBold text-fcNavy6" data-aos="fade-up">
                 „Fortunately, I can maintain
                 <br /> and update my online store
                 <br /> really easily on my own.“
               </p>
-              <p className="text-fcNavy6 font-semibold text-sm">Birgit,<span className="font-thin"> spectrum-fashion.de</span> </p>
+              <p className="text-fcNavy6 font-semibold text-sm" data-aos="fade-up">Birgit,<span className="font-thin" > spectrum-fashion.de</span> </p>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-2  items-center mx-10 my-20 gap-8">
-          <div>
+          <div  data-aos="fade-up" data-aos-anchor-placement="top-center">
             <p className="text-fcNavy6 text-3xl font-semibold ">Why Jimdo?</p>
             <p className="py-4  font-thin text-fcNavy6 ">
               Developed with small businesses and the self-employed in mind, we
