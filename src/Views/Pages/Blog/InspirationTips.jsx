@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Inspiration = () => {
+const InspirationTips = () => {
   return (
     <div>
       common
@@ -8,4 +8,4 @@ const Inspiration = () => {
   )
 }
 
-export default Inspiration
+export default InspirationTips

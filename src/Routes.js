@@ -7,7 +7,6 @@ import OnlineSore from "./Views/Pages/Pricing/OnlineSore";
 import Website from "./Views/Pages/Pricing/Website";
 import Blog from "./Views/Pages/Blog/Blog";
 import Features from "./Views/Pages/Features/Features";
-// import FeatureWebsites from "./Views/Pages/Features/FeatureWebsites";
 import HelpCenter from "./Views/Pages/Help/HelpCenter";
 import Contact from "./Views/Pages/Help/Contact";
 import Login from "./Views/Auth/Login";
@@ -16,6 +15,7 @@ import Email from "./Views/Auth/SignUp/Email";
 import WebsiteTips from "./Views/Pages/Blog/WebsiteTips";
 import BusinessTips from "./Views/Pages/Blog/BusinessTips";
 import News from "./Views/Pages/Blog/News";
+import InspirationTips from "./Views/Pages/Blog/InspirationTips";
 
 export function Routes() {
   let element = useRoutes([
@@ -83,21 +83,21 @@ export function Routes() {
           element: <Blog />,
         },
         {
-          path: "/websiteTips",
+          path: "websiteTips",
           element: <WebsiteTips />,
         },
         {
-          path: "/businessTips",
+          path: "businessTips",
           element: <BusinessTips />,
         },
         {
-          path: "/inspiration",
-          element: <Inspiration />,
+          path: "inspirations",
+          element: <InspirationTips />,
         },
         {
-          path: "/news",
+          path: "news",
           element: <News />,
-        },
+        }
       ],
     },
     {

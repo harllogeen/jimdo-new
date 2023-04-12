@@ -9,7 +9,7 @@ const NavbarBlog = () => {
       <div className="px-20">
         <div className="bg-white">
           <div className="flex justify-between items-center">
-            <Link to="/">
+            <Link to="/blog">
               <Logo />
             </Link>
 
@@ -20,19 +20,19 @@ const NavbarBlog = () => {
         </div>
         <nav className="relative md:sticky md:top-0 pb-8 flex items-center justify-between bg-white ">
           <ul className="flex items-center space-x-4">
-            <Link className=" font-semibold hover:text-primary duration-200 cursor-pointer text-primary">
+            <Link to="" className=" font-semibold hover:text-primary duration-200 cursor-pointer text-primary">
               Recent Posts
             </Link>
-            <Link className=" font-semibold hover:text-primary duration-200 cursor-pointer">
+            <Link to="/blog/websiteTips" className=" font-semibold hover:text-primary duration-200 cursor-pointer">
               Website Tips
             </Link>
-            <Link className=" font-semibold hover:text-primary duration-200 cursor-pointer">
+            <Link to="/blog/businessTips" className=" font-semibold hover:text-primary duration-200 cursor-pointer">
               Business Tips
             </Link>
-            <Link className=" font-semibold hover:text-primary duration-200 cursor-pointer">
+            <Link to="/blog/inspirations" className=" font-semibold hover:text-primary duration-200 cursor-pointer">
               Inspiration
             </Link>
-            <Link className=" font-semibold hover:text-primary duration-200 cursor-pointer">
+            <Link to="blog/news" className=" font-semibold hover:text-primary duration-200 cursor-pointer">
               News
             </Link>
           </ul>
