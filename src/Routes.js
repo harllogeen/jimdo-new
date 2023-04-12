@@ -13,6 +13,9 @@ import Contact from "./Views/Pages/Help/Contact";
 import Login from "./Views/Auth/Login";
 import SignUp from "./Views/Auth/SignUp";
 import Email from "./Views/Auth/SignUp/Email";
+import WebsiteTips from "./Views/Pages/Blog/WebsiteTips";
+import BusinessTips from "./Views/Pages/Blog/BusinessTips";
+import News from "./Views/Pages/Blog/News";
 
 export function Routes() {
   let element = useRoutes([
@@ -32,18 +35,18 @@ export function Routes() {
         //   element: <CommunitySignUp />,
         // },
         {
-          path:"signup",
-          children:[
+          path: "signup",
+          children: [
             {
-              index:true,
-              element:<SignUp />
+              index: true,
+              element: <SignUp />,
             },
             {
-              path:"email",
-              element:<Email />
-            }
-          ]
-        }
+              path: "email",
+              element: <Email />,
+            },
+          ],
+        },
       ],
     },
     {
@@ -79,6 +82,22 @@ export function Routes() {
           index: true,
           element: <Blog />,
         },
+        {
+          path: "/websiteTips",
+          element: <WebsiteTips />,
+        },
+        {
+          path: "/businessTips",
+          element: <BusinessTips />,
+        },
+        {
+          path: "/inspiration",
+          element: <Inspiration />,
+        },
+        {
+          path: "/news",
+          element: <News />,
+        },
       ],
     },
     {
@@ -87,8 +106,7 @@ export function Routes() {
         {
           index: true,
           element: <Features />,
-        }
-        
+        },
       ],
     },
     {
@@ -100,9 +118,8 @@ export function Routes() {
         },
         {
           path: "contact",
-          element: <Contact />
-        }
-        
+          element: <Contact />,
+        },
       ],
     },
   ]);
