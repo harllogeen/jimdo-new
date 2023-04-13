@@ -30,10 +30,6 @@ export function Routes() {
           path: "login",
           element: <Login />,
         },
-        // {
-        //   path: "communitySignup",
-        //   element: <CommunitySignUp />,
-        // },
         {
           path: "signup",
           children: [
