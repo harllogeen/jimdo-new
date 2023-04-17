@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Navbar from "../../../Component/navbar/Navbar";
 import Hero from "../../../Assets/Img/hero.jpg";
 import PrimaryButton from "../../../Component/common/PrimaryButton";
@@ -6,7 +6,7 @@ import FeatureWebsites from "./FeatureWebsites";
 import FeatureOnlineStore from "./FeatureOnlineStore";
 
 const Features = () => {
-  const [SwitchFeatureWebsites, setSwitchFeatureWebsites] = useState(false);
+  const [switchFeatureWebsites, setSwitchFeatureWebsites] = useState(true);
   return (
     <div>
       <div>
@@ -31,14 +31,22 @@ const Features = () => {
               <div>
                 <div className="flex justify-center items-center cursor-pointer mt-8 ">
                   <div
-                    className="bg-white text-center shadow-md w-48 py-2 text-primary font-bold hover:underline font-GilroySemiBold underline-offset-[10px] decoration-primary decoration-4 active:underline outline-offset-[20px]  "
-                    onClick={() => setSwitchFeatureWebsites(false)}
+                    className={`text-center shadow-md w-48 py-2 text-primary font-bold hover:underline font-GilroySemiBold underline-offset-[10px] decoration-primary decoration-4 active:underline outline-offset-[20px] ${
+                      switchFeatureWebsites
+                        ? "bg-white shadow-lg "
+                        : "bg-trnasparent border border-primary"
+                    }`}
+                    onClick={() => setSwitchFeatureWebsites(true)}
                   >
                     Website
                   </div>
                   <div
-                    className="bg-[#CBD4D5] text-center shadow-md w-48 py-2 text-fcGray font-bold hover:underline font-GilroySemiBold underline-offset-[10px] decoration-primary decoration-4 "
-                    onClick={() => setSwitchFeatureWebsites(true)}
+                    className={`text-center shadow-md w-48 py-2 text-primary font-bold hover:underline font-GilroySemiBold underline-offset-[10px] decoration-primary decoration-4 active:underline outline-offset-[20px] ${
+                      switchFeatureWebsites
+                        ? "bg-transparent border border-primary"
+                        : "bg-white shadow-lg "
+                    }`}
+                    onClick={() => setSwitchFeatureWebsites(false)}
                   >
                     Online Store
                   </div>
@@ -52,7 +60,7 @@ const Features = () => {
           </div>
         </section>
         <section>
-         {SwitchFeatureWebsites ? <FeatureOnlineStore /> : <FeatureWebsites /> }
+          {switchFeatureWebsites ? <FeatureWebsites /> : <FeatureOnlineStore />}
         </section>
       </div>
     </div>

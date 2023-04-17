@@ -118,11 +118,11 @@ const Contact = () => {
                   <div>
                     <ol className=" space-y-1 text-gray-500 list-decimal py-6  dark:text-gray-400">
                       <li>
-                        <span className="text-primary">Log in</span> to your
+                        <Link to="/login" className="text-primary">Log in</Link> to your
                         Jimdo account and{" "}
-                        <span className="text-primary">
+                        <Link to="/login" className="text-primary">
                           choose the desired website
-                        </span>
+                        </Link>
                       </li>
                       <li>
                         Open the <span className="font-bold">Need Help?</span>{" "}

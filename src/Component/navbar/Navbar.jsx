@@ -5,141 +5,144 @@ import Logo from "../common/Logo";
 import DropDown from "../common/DropDown";
 
 function Navbar() {
-  const [openchevron, setOpenChevron] = useState(false);
+  const [openProduct, setOpenProduct] = useState(false);
   const [openHelpCenter, setOpenHelpCenter] = useState(false);
-
-  // handle toggle
-  // const toggle = () => {
-  //   setOpenChevron(!openchevron);
-  // };
 
   return (
     <div>
       <div className="bg-blue-500">
-        <nav className="fixed top-0 px-8 py-4 flex justify-between items-center bg-white shadow-md  w-full z-50 ">
-          <Link className="text-xl font-bold leading-none" to="/">
-            <Logo />
-          </Link>
-          <div className="lg:hidden">
-            <button className="navbar-burger flex items-center text-blue-600 p-3">
-              <svg
-                className="block h-4 w-4 fill-current"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Mobile menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-              </svg>
-            </button>
-          </div>
-          <ul className="hidden absolute top-1/2 left-1/3 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto  lg:items-center lg:w-auto lg:space-x-10">
-            <li>
-              {/* product navbar with dropdown */}
-              <Link
-                className="text-sm text-gray-900 font-bold flex items-center gap-2 hover:text-primary"
-                to="/"
-                onMouseEnter={() => setOpenChevron(true)}
-                onMouseLeave={() => setOpenChevron(false)}
-              >
-                Products
-                <div className=" hover:text-primary">
-                  {openchevron === false ? (
-                    <HiChevronDown className="text-[16px] font-Bold text-black " />
-                  ) : (
-                    <HiChevronUp className="text-[16px] font-Bold text-black " />
-                  )}
-                </div>
-                <DropDown
-                  className="absolute top-12 bg-white "
-                  show={openchevron}
+        <nav className="fixed  top-0 px-8 py-4 flex justify-between items-center bg-white shadow-md  w-full z-50 ">
+          <div className="flex items-center space-x-28">
+            <Link className="text-xl font-bold leading-none" to="/">
+              <Logo />
+            </Link>
+            <ul className="hidden  space-x-4 md:inline-flex items-center p-4   text-sm text-gray-900 font-bold">
+              <li>
+                {/* product navbar with dropdown */}
+                <Link
+                  className="text-sm  text-gray-900 font-bold flex items-center gap-2 hover:text-primary"
+                  to="/"
+                  onMouseEnter={() => setOpenProduct(true)}
+                  onMouseLeave={() => setOpenProduct(false)}
                 >
-                  <div>
-                    <div className="grid justify-center items-center text-#303159 my-4  w-full font-GilroyBold space-y-6">
-                      <div className="text-[#303159]">
-                        <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary">
-                          Websites
-                        </h2>
-                        <p className="text-[12px]">
-                          Start your professional website in minutes
-                        </p>
-                      </div>
-                      <div className="text-[#303159]">
-                        <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary">
-                          Online Store
-                        </h2>
-                        <p className="text-[12px]">
-                          Starting selling online with your store
-                        </p>
-                      </div>
-                      <div className="text-[#303159]">
-                        <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary">
-                          Domain
-                        </h2>
-                        <p className="text-[12px]">
-                          Get your personalized domain for $0 in the first year
-                        </p>
-                      </div>
-                      <div className="text-[#303159]">
-                        <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary">
-                          Logo
-                        </h2>
-                        <p className="text-[12px]">
-                          Create your own customized logo
-                        </p>
-                      </div>
-                      <div className="text-[#303159]">
-                        <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary">
-                          Facebook $ Instagram
-                        </h2>
-                        <p className="text-[12px]">
-                          Promote your business on Facebook and Instagram
-                        </p>
+                  Products
+                  <div className=" hover:text-primary">
+                    {openProduct === false ? (
+                      <HiChevronDown className="text-[16px] font-Bold text-black " />
+                    ) : (
+                      <HiChevronUp className="text-[16px] font-Bold text-black " />
+                    )}
+                  </div>
+                  <DropDown
+                    className="absolute top-12  bg-white  "
+                    show={openProduct}
+                  >
+                    <div>
+                      <div className="grid justify-center items-center text-#303159 my-4  w-full font-GilroyBold space-y-6">
+                        <div className="text-fcNavy6 hover:text-primary">
+                          <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary ">
+                            Websites
+                            <br />
+                            <span className="text-[12px]">
+                              Start your professional website in minutes
+                            </span>
+                          </h2>
+                        </div>
+                        <div className="text-fcNavy6 hover:text-primary">
+                          <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary  ">
+                            Online Store
+                            <br />
+                            <span className="text-[12px]">
+                              Starting selling online with your store
+                            </span>
+                          </h2>
+                        </div>
+                        <div className="text-fcNavy6 hover:text-primary">
+                          <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary  ">
+                            Domain
+                            <br />
+                            <span className="text-[12px]">
+                              Get your personalized domain for $0 in the first
+                              year
+                            </span>
+                          </h2>
+                        </div>
+                        <div className="text-fcNavy6 hover:text-primary">
+                          <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary  ">
+                            Logo
+                            <br />
+                            <span className="text-[12px]">
+                              Create your own customized logo
+                            </span>
+                          </h2>
+                        </div>
+                        <div className="text-fcNavy6 hover:text-primary">
+                          <h2 className="text-[18px] text-fcNavy6 font-bold hover:text-primary  ">
+                            Facebook $ Instagram
+                            <br />
+                            <span className="text-[12px]">
+                              Promote your business on Facebook and Instagram
+                            </span>
+                          </h2>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </DropDown>
-              </Link>
-            </li>
+                  </DropDown>
+                </Link>
+              </li>
 
-            <li>
-              <Link
-                className="text-sm text-gray-900 font-bold hover:text-primary"
-                to="/inspiration"
-              >
-                Inspiration
-              </Link>
-            </li>
+              <li>
+                <Link
+                  className="text-sm text-gray-900 font-bold hover:text-primary"
+                  to="/inspiration"
+                >
+                  Inspiration
+                </Link>
+              </li>
 
-            <li>
-              <Link
-                className="text-sm text-gray-900 font-bold hover:text-primary"
-                to="/price"
-              >
-                Pricing
-              </Link>
-            </li>
+              <li>
+                <Link
+                  className="text-sm text-gray-900 font-bold hover:text-primary"
+                  to="/price"
+                >
+                  Pricing
+                </Link>
+              </li>
 
-            <li>
-              <Link
-                className="text-sm text-gray-900 font-bold hover:text-primary"
-                to="/blog"
-              >
-                Blog
-              </Link>
-            </li>
+              <li>
+                <Link
+                  className="text-sm text-gray-900 font-bold hover:text-primary"
+                  to="/blog"
+                >
+                  Blog
+                </Link>
+              </li>
 
-            <li>
-              <Link
-                className="text-sm text-gray-900 font-bold hover:text-primary"
-                to="/features"
-              >
-                Features
-              </Link>
-            </li>
-          </ul>
+              <li>
+                <Link
+                  className="text-sm text-gray-900 font-bold hover:text-primary"
+                  to="/features"
+                >
+                  Features
+                </Link>
+              </li>
+            </ul>
+            <div className="lg:hidden">
+              <button className="navbar-burger flex items-center text-blue-600 p-3">
+                <svg
+                  className="block h-4 w-4 fill-current"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
           {/* help navbar with dropdown */}
           <Link
-            className="hidden lg:flex items-center gap-2 lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-sm transition duration-200"
+            className=" lg:flex items-center gap-2 lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-sm transition duration-200"
             to="/"
             onMouseEnter={() => setOpenHelpCenter(true)}
             onMouseLeave={() => setOpenHelpCenter(false)}

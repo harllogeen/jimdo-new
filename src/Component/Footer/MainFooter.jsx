@@ -77,7 +77,7 @@ const MainFooter = () => {
                 )}
               </div>
             </Link>
-            <div className="absolute bottom-6 right-16 z-50">
+            <div className="fixed bottom-6 right-8 z-50  ">
             <ScrollToTop />
             </div>
           </div>

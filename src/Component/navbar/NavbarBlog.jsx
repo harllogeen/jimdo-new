@@ -3,7 +3,9 @@ import Logo from "../common/Logo";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 
-const NavbarBlog = () => {
+
+
+const NavbarBlog = ({value}) => {
   return (
     <div>
       <div className="px-20">
@@ -20,36 +22,47 @@ const NavbarBlog = () => {
         </div>
         <nav className="relative md:sticky md:top-0 pb-8 flex items-center justify-between bg-white ">
           <ul className="flex items-center space-x-4">
-            <Link
-              to="/blog"
-              className=" font-semibold hover:text-primary duration-200 cursor-pointer text-primary"
-            >
-              Recent Posts
-            </Link>
-            <Link
-              to="/blog/websiteTips"
-              className=" font-semibold hover:text-primary duration-200 cursor-pointer"
-            >
-              Website Tips
-            </Link>
-            <Link
-              to="/blog/businessTips"
-              className=" font-semibold hover:text-primary duration-200 cursor-pointer"
-            >
-              Business Tips
-            </Link>
-            <Link
-              to="/blog/inspirations"
-              className=" font-semibold hover:text-primary duration-200 cursor-pointer"
-            >
-              Inspiration
-            </Link>
-            <Link
-              to="/blog/news"
-              className=" font-semibold hover:text-primary duration-200 cursor-pointer"
-            >
-              News
-            </Link>
+            <li>
+              <Link
+                to="/blog"
+                className=" font-semibold hover:text-primary duration-200 cursor-pointer text-primary"
+              >
+                Recent Posts
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog/websiteTips"
+                className=" font-semibold hover:text-primary duration-200 cursor-pointer"
+              >
+                Website Tips
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog/businessTips"
+                className=" font-semibold hover:text-primary duration-200 cursor-pointer"
+              >
+                Business Tips
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog/inspirations"
+                className=" font-semibold hover:text-primary duration-200 cursor-pointer"
+              >
+                Inspiration
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/blog/news"
+                className=" font-semibold hover:text-primary duration-200 cursor-pointer"
+              >
+                News
+              </Link>
+            </li>
           </ul>
           {/* <!-- buttons ---> */}
           <div className="w-3/12 flex justify-end">
@@ -72,3 +85,5 @@ const NavbarBlog = () => {
 };
 
 export default NavbarBlog;
+
+

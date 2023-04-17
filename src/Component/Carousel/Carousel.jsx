@@ -6,7 +6,6 @@ import pics4 from "../../Assets/Img/pics4.jpg";
 import pics5 from "../../Assets/Img/pics5.jpg";
 
 // Data
-import data from "../Carousel/data.json";
 
 const Carousel = () => {
   const maxScrollWidth = useRef(0);
@@ -28,19 +27,19 @@ const Carousel = () => {
     }
   };
 
-  const isDisabled = (direction) => {
-    if (direction === "prev") {
-      return currentIndex <= 0;
-    }
+  // const isDisabled = (direction) => {
+  //   if (direction === "prev") {
+  //     return currentIndex <= 0;
+  //   }
 
-    if (direction === "next" && carousel.current !== null) {
-      return (
-        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
-      );
-    }
+  //   if (direction === "next" && carousel.current !== null) {
+  //     return (
+  //       carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
+  //     );
+  //   }
 
-    return false;
-  };
+  //   return false;
+  // };
 
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {

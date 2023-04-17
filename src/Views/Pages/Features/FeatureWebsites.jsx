@@ -122,7 +122,7 @@ const FeatureWebsites = () => {
                 <br /> and update my online store
                 <br /> really easily on my own.“
               </p>
-              <p className="text-fcNavy6 font-semibold text-sm" data-aos="fade-up">Birgit,<span className="font-thin" > spectrum-fashion.de</span> </p>
+              <p className="text-fcNavy6 font-semibold text-sm" data-aos="zoom-up">Birgit,<span className="font-thin" > spectrum-fashion.de</span> </p>
             </div>
           </div>
         </div>
