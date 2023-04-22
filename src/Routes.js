@@ -5,7 +5,7 @@ import Inspiration from "./Views/Pages/Inspiration/Inspiration";
 import Pricing from "./Views/Pages/Pricing/Pricing";
 import OnlineSore from "./Views/Pages/Pricing/OnlineSore";
 import Website from "./Views/Pages/Pricing/Website";
-import Blog from "./Views/Pages/Blog/Blog";
+import Blog from "./Views/Pages/Blog/RecentPost";
 import Features from "./Views/Pages/Features/Features";
 import HelpCenter from "./Views/Pages/Help/HelpCenter";
 import Contact from "./Views/Pages/Help/Contact";
@@ -55,7 +55,7 @@ export function Routes() {
       ],
     },
     {
-      path: "price",
+      path: "/price",
       children: [
         {
           index: true,
@@ -93,7 +93,7 @@ export function Routes() {
         {
           path: "news",
           element: <News />,
-        }
+        },
       ],
     },
     {

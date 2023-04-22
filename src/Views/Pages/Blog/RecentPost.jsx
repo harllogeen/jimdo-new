@@ -161,8 +161,7 @@ const Blog = () => {
               </BigTitle>
               <p
                 className="text-6xl font-extrabold text-primary "
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-center"
+               data-aos="fade-down"
               >
                 FOR SMALL BUSINESSES
               </p>

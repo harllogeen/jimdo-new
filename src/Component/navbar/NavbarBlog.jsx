@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../common/Logo";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 
+const NavbarBlog = () => {
+  const [isActive, setIsActive] = useState(0);
 
-
-const NavbarBlog = ({value}) => {
   return (
     <div>
-      <div className="px-20">
+      <div className="px-20 ">
         <div className="bg-white">
           <div className="flex justify-between items-center">
             <Link to="/">
@@ -25,15 +25,22 @@ const NavbarBlog = ({value}) => {
             <li>
               <Link
                 to="/blog"
-                className=" font-semibold hover:text-primary duration-200 cursor-pointer text-primary"
+                className={` font-semibold hover:text-primary duration-200 cursor-pointer ${
+                  isActive === 0 ? "text-primary" : null
+                }`}
+                onClick={() => setIsActive(0)}
               >
                 Recent Posts
               </Link>
             </li>
+
             <li>
               <Link
                 to="/blog/websiteTips"
-                className=" font-semibold hover:text-primary duration-200 cursor-pointer"
+                className={` font-semibold hover:text-primary duration-200 cursor-pointer ${
+                  isActive === 1 ? "text-primary" : null
+                }`}
+                onClick={() => setIsActive(1)}
               >
                 Website Tips
               </Link>
@@ -41,7 +48,10 @@ const NavbarBlog = ({value}) => {
             <li>
               <Link
                 to="/blog/businessTips"
-                className=" font-semibold hover:text-primary duration-200 cursor-pointer"
+                className={` font-semibold hover:text-primary duration-200 cursor-pointer ${
+                  isActive === 2 ? "text-primary" : null
+                }`}
+                onClick={() => setIsActive(2)}
               >
                 Business Tips
               </Link>
@@ -49,7 +59,10 @@ const NavbarBlog = ({value}) => {
             <li>
               <Link
                 to="/blog/inspirations"
-                className=" font-semibold hover:text-primary duration-200 cursor-pointer"
+                className={` font-semibold hover:text-primary duration-200 cursor-pointer ${
+                  isActive === 3 ? "text-primary" : null
+                }`}
+                onClick={() => setIsActive(3)}
               >
                 Inspiration
               </Link>
@@ -58,7 +71,10 @@ const NavbarBlog = ({value}) => {
             <li>
               <Link
                 to="/blog/news"
-                className=" font-semibold hover:text-primary duration-200 cursor-pointer"
+                className={` font-semibold hover:text-primary duration-200 cursor-pointer ${
+                  isActive === 4 ? "text-primary" : null
+                }`}
+                onClick={() => setIsActive(4)}
               >
                 News
               </Link>
@@ -85,5 +101,3 @@ const NavbarBlog = ({value}) => {
 };
 
 export default NavbarBlog;
-
-

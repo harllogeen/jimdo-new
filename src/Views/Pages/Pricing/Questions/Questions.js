@@ -1,4 +1,3 @@
-
 import React from "react";
 import Title from "../../../../Component/common/Title";
 import AccordionQuestion from "../Questions/AccordionQuestions"
