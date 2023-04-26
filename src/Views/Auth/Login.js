@@ -36,7 +36,7 @@ const Login = () => {
   // })
   // .then(response => response.json())
   // .then(data => {
-  //store JWT token in local storage or cookie
+      //store JWT token in local storage or cookie
   //     localStorage.setItem('token', data.token)
   // })
   // .catch(error => console.error(error));
@@ -48,7 +48,7 @@ const Login = () => {
   // })
   // .then(response => response.json())
   // .then(data => {
-  //Handle response data
+    //Handle response data
   // })
   // .catch(error => console.error(error))
 
@@ -105,12 +105,11 @@ const Login = () => {
                   <AiOutlineMail className="absolute top-4 left-3 text-xl" />
                 </div>
 
-                <div className=" items-center justify-center relative mx-auto ">
+                <div className=" items-center justify-center relative mx-auto " >
                   <TextField
                     name="password"
                     type={open === false ? "password" : "text"}
                     placeholder="Password"
-                    
                   />
                   <GrLock className="absolute top-4 left-3 text-xl" />
                   <div className="text-2xl absolute top-4 right-5">

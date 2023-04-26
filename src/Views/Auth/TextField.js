@@ -6,10 +6,10 @@ export const TextField = ({ label, ...props }) => {
   
   return (
     
-    <div className="mb-2 items-center justify-center">
+    <div className="mb-2 items-center justify-center group">
       <input
-        className={`form-control border-2  w-full  h-12 opacity-100 bg-[#F7F7F7]  pl-14 text-sm mb-1 items-center justify-center  outline-none shadow-none ${
-          meta.touched && meta.error ? 'border-fcred' : 'border-primary'
+        className={`form-control border-2  w-full h-12 pl-14 text-sm mb-1 items-center justify-center outline-primary  shadow-none ${
+          meta.touched && meta.error ? 'border-fcred' : "border-fcGray4"
         }`}
         {...field}
         {...props}
